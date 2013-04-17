@@ -1,0 +1,5 @@
+# Python files
+*.py[c]
+
+# Text files
+*.log
