@@ -3,3 +3,6 @@
 
 # Text files
 *.log
+
+# ignore files in the tmp directory
+tmp/
