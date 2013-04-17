@@ -1,5 +1,12 @@
 #! /usr/bin/env python
-# This will calculate how much you will spend on gas per month
+##############################################
+# Copyright 2013 Michael Neeley
+#
+# See the file LICENSE for copying permission.
+##############################################
+
+
+# gas.py will help calculate how much you will spend on gas per month
 
 # library imports
 import urllib2
