@@ -6,3 +6,4 @@
 
 # ignore files in the tmp directory
 tmp/
+simplejson/
