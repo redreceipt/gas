@@ -4,6 +4,10 @@
 # Text files
 *.log
 
+# Google generated images
+*.bmp
+*.png
+
 # ignore files in the tmp directory
 tmp/
 simplejson/
