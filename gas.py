@@ -1,5 +1,10 @@
-#! /usr/bin/env python
-# This will calculate how much the user will spend on gas per month
+#!/usr/local/bin python
+#
+##############################################
+# Copyright 2013 Michael Neeley
+#
+# See the file LICENSE for copying permission.
+##############################################
 """
 	This application will calculate how much you will spend on gas per month.
 	It will ask for home address, work address, and year, make, and model of
@@ -22,7 +27,7 @@ import time
 import urllib2 as url
 import simplejson as json
 from xml.etree import ElementTree as et
-from PIL import Image
+import Image
 
 def _googleStrip(input):
 	"""This will parse a string into Google Maps API format"""
@@ -68,10 +73,10 @@ def _processGasAPI(response):
 	prices = []
 	addresses = []
 	for i, station in enumerate(gasJSON[u"stations"]):
-		if station[u"reg_price"] != "N/A":
+		if station[u"price"] != "N/A":
 			
-			price = float(station[u"reg_price"])
-			date = station[u"reg_date"]
+			price = float(station[u"price"])
+			date = station[u"date"]
 			address = station[u"address"] + " " + station[u"city"] + " " + station[u"region"]
 			
 			prices.append(price)
