@@ -27,7 +27,7 @@ import time
 import urllib2 as url
 import simplejson as json
 from xml.etree import ElementTree as et
-import Image
+#from PIL import Image
 
 def _googleStrip(input):
 	"""This will parse a string into Google Maps API format"""
@@ -177,7 +177,8 @@ def getDistance(startStr = "Start", endStr = "End", question = "How far?\n"):
 		f.write("")
 		f.write(imgData)
 		f.close()
-		bmp = Image.open("./distance.png")
+
+#		bmp = Image.open("./distance.png")
 		
 	except url.URLError:
 		print "Can't connect to Google Maps"
@@ -193,7 +194,7 @@ def getDistance(startStr = "Start", endStr = "End", question = "How far?\n"):
 	if startStr == "Home":
 		return [start, end, distance]
 		
-	bmp.show()
+#	bmp.show()
 	return distance
 	
 def getGasPrice(locationR = "Columbia, SC"):
@@ -237,7 +238,7 @@ def getGasPrice(locationR = "Columbia, SC"):
 		f.write("")
 		f.write(imgData)
 		f.close()
-		bmp = Image.open("./stations.png")
+#		bmp = Image.open("./stations.png")
 		
 	except url.URLError:
 		print "Can't connect to Google Maps and myGasFeed.com"
@@ -251,7 +252,7 @@ def getGasPrice(locationR = "Columbia, SC"):
 				print "Please enter a number..."
 	
 	print ("Showing the 5 cheapest stations near you...")
-	bmp.show()
+#	bmp.show()
 	return price
 	
 def getMPG():
